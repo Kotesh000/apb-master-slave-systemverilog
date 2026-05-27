@@ -160,9 +160,3 @@ do sim/run.do
 - Waveform Debugging
 
 ---
-
-## Author
-
-Kuncham Koteswar  
-Electronics and Communication Engineering  
-Focused on VLSI Design and Verification
