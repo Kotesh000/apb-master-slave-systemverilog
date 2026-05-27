@@ -160,3 +160,36 @@ do sim/run.do
 - Waveform Debugging
 
 ---
+
+## APB Protocol Waveforms
+
+### APB Master-Slave Communication
+
+The waveform below shows APB protocol timing including:
+- SETUP phase
+- ACCESS phase
+- Wait-state insertion
+- FSM transitions
+
+![Waveform](docs/waveform_master_slave.png)
+
+---
+
+### APB Interface Timing
+
+The waveform below shows interface-level APB signaling and transaction flow.
+
+![Protocol Waveform](docs/waveform_protocol.png)
+
+---
+
+## Functional Coverage Report
+
+The verification environment achieved:
+- 100% Functional Coverage
+- 100% Assertion Coverage
+- Full Read/Write Coverage
+- Full Address Coverage
+- Wait-State Coverage
+
+![Coverage Report](docs/coverage_report.png)
