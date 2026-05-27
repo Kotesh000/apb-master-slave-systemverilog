@@ -1,0 +1,78 @@
+APB PROJECT NOTES
+
+Project:
+
+Designed and verified APB Master-Slave subsystem using SystemVerilog.
+
+
+Features Implemented:
+
+1. APB Master RTL
+2. APB Slave RTL
+3. FSM-based protocol control
+4. Wait-state handling using PREADY
+5. Read and write transactions
+6. Assertions (SVA)
+7. Functional coverage
+8. Interface-based APB bus abstraction
+
+
+FSM States:
+
+1. IDLE
+2. SETUP
+3. ACCESS
+
+
+APB Transfer Flow:
+
+SETUP:
+    PSELx = 1
+    PENABLE = 0
+
+ACCESS:
+    PENABLE = 1
+
+Transfer completes when:
+    PREADY = 1
+
+
+Assertions Used:
+
+1. PENABLE implies PSELx
+
+
+Coverage Implemented:
+
+1. Read/Write coverage
+2. Address coverage
+3. Wait-state coverage
+
+
+Simulation Commands:
+
+Compile:
+vlog rtl/apb_if.sv
+vlog rtl/apb_master.sv
+vlog rtl/apb_slave.sv
+vlog tb/top.sv
+
+Simulate:
+vsim -voptargs="+acc" top
+
+Load Waveform:
+do sim/wave.do
+
+Run:
+run -all
+
+
+Learning Outcomes:
+
+1. APB protocol timing
+2. FSM design
+3. Handshake protocols
+4. Wait-state handling
+5. Assertions
+6. Functional coverage
+7. SystemVerilog interfaces
